@@ -1,0 +1,201 @@
+/* src/index.css */
+:root {
+  --primary: #FF9800;    /* Solar Orange */
+  --primary-hover: #F57C00;
+  --secondary: #4CAF50;  /* Eco Green */
+  --dark: #1e293b;       /* Slate Dark */
+  --light: #f8fafc;      /* Cloud White */
+  --shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
+  --radius: 12px;
+}
+
+* {
+  box-sizing: border-box; /* CRITICAL: Prevents padding from adding width */
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden; /* CRITICAL: Forces no side-scrolling */
+  font-family: 'Poppins', sans-serif;
+  color: var(--dark);
+  background-color: var(--light);
+  line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3 { line-height: 1.2; font-weight: 700; }
+h1 { font-size: 3.5rem; }
+h2 { font-size: 2.5rem; text-align: center; margin-bottom: 1rem; }
+.highlight { color: var(--primary); }
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1rem;
+}
+.btn-primary { background: var(--primary); color: white; box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4); }
+.btn-primary:hover { background: var(--primary-hover); transform: translateY(-2px); }
+.btn-secondary { background: transparent; border: 2px solid white; color: white; margin-left: 10px; }
+.btn-secondary:hover { background: white; color: var(--dark); }
+
+/* Layout Utilities */
+section { padding: 80px 20px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.grid { display: grid; gap: 40px; }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+
+/* --- NAVBAR STYLES --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 15px 0;
+  transition: all 0.3s ease;
+  background: transparent;
+}
+
+/* Scrolled State */
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  padding: 10px 0;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo & Links Colors */
+.navbar .logo { 
+  display: flex; 
+  align-items: center; 
+  font-size: 1.5rem; 
+  font-weight: 800; 
+  color: white; 
+}
+.navbar.scrolled .logo { color: var(--dark); }
+
+.nav-links { display: flex; gap: 30px; align-items: center; }
+.nav-links a { color: white; text-decoration: none; font-weight: 500; }
+.navbar.scrolled .nav-links a { color: var(--dark); }
+.navbar.scrolled .btn-primary { color: white !important; }
+
+/* Mobile Toggle Button */
+.mobile-toggle { display: none; cursor: pointer; color: white; z-index: 1001; }
+.navbar.scrolled .mobile-toggle { color: var(--dark); }
+
+
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2072&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding-top: 60px;
+}
+.hero-content { max-width: 800px; width: 100%; padding: 0 20px; }
+.hero p { font-size: 1.2rem; margin: 20px 0 30px; opacity: 0.9; }
+
+/* Components */
+.card { background: white; padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow); text-align: center; }
+.icon { font-size: 3rem; color: var(--secondary); margin-bottom: 20px; }
+.contact-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+
+/* Steps */
+.step-card { text-align: center; position: relative; padding: 20px; }
+.step-number { background: var(--primary); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 20px; position: relative; z-index: 2; }
+
+/* Connector Line - Only show on large screens */
+@media (min-width: 1060px) {
+  .step-connector::after { content: ''; position: absolute; top: 45px; left: 50%; width: 100%; height: 2px; background: #e2e8f0; z-index: 1; }
+  .step-card:last-child .step-connector::after { display: none; }
+}
+
+/* WhatsApp */
+.whatsapp-float { position: fixed; bottom: 30px; right: 30px; background: #25D366; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4); z-index: 100; text-decoration: none; transition: transform 0.3s ease; }
+.whatsapp-float:hover { transform: scale(1.1); }
+
+
+/* --- TABLET & MOBILE RESPONSIVENESS FIX --- */
+/* Changed breakpoint from 768px to 1060px */
+@media (max-width: 1060px) {
+  /* Typography Scale Down */
+  h1 { font-size: 2.2rem; }
+  h2 { font-size: 1.8rem; }
+  
+  /* Prevent horizontal overflow on grid */
+  .grid-3, .contact-grid { grid-template-columns: 1fr !important; }
+
+  /* Navbar Switching to Hamburger */
+  .mobile-toggle { display: block; }
+  
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 20px 0;
+    gap: 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    
+    /* Animation */
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+  
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Force Mobile Links to be visible (Black) */
+  .navbar .nav-links a {
+    color: var(--dark) !important;
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .navbar .nav-links a:last-child { border-bottom: none; }
+  
+  .navbar .nav-links .btn-primary {
+    display: inline-block;
+    width: 80%;
+    margin: 10px auto;
+    color: white !important;
+  }
+  
+  /* Fix Hero Overlap */
+  .hero { 
+    height: auto; 
+    min-height: 85vh; 
+    padding: 120px 20px 60px;
+  }
+}
