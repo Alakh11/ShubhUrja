@@ -123,7 +123,7 @@ function App() {
       </footer>
 
       {/* Floating WhatsApp Button */}
-      <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" className="whatsapp-float">
+      <a href="https://wa.me/919580813770" target="_blank" rel="noreferrer" className="whatsapp-float">
         <span className="material-symbols-outlined whatsapp-icon" style={{fontSize: '32px'}}>chat</span>
       </a>
 
