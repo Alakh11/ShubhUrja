@@ -20,7 +20,7 @@ function App() {
           <p>
             Join the energy revolution. Cut your electricity bills by up to 90% and secure a sustainable future for your family with ShubhUrja.
           </p>
-          <div style={{ marginTop: '20px' }}>
+          <div className="button-group" style={{ marginTop: '20px' }}>
             <a href="#calculator" className="btn btn-primary">Calculate Savings</a>
             <a href="#projects" className="btn btn-secondary">See Our Work</a>
           </div>
