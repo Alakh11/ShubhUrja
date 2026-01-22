@@ -4,8 +4,8 @@ const ProjectGallery = () => {
   // You can duplicate these lines to add more photos
   const projects = [
     { id: 1, title: "10kW Residential", location: "Shaheed Path Lucknow", img: "https://images.unsplash.com/photo-1624397640148-949b1732bb0a?auto=format&fit=crop&w=800" },
-    { id: 2, title: "Farm Installation", location: "Sharda Nagar Lucknow", img: "/solar.jpeg" },
-    { id: 3, title: "Commercial Plant", location: "Krishna Nagar Lucknow", img: "/bill.jpeg" },
+    { id: 2, title: "Farm Installation", location: "Sharda Nagar Lucknow", img: "./solar.jpeg" },
+    { id: 3, title: "Commercial Plant", location: "Krishna Nagar Lucknow", img: "./bill.jpeg" },
     { id: 4, title: "Housing Society", location: "Telibagh Lucknow", img: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=800" },
   ];
 

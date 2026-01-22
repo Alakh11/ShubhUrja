@@ -20,7 +20,7 @@ const Navbar = () => {
         {/* LOGO SECTION */}
         <div className="logo" style={{ display: 'flex', alignItems: 'center', color: scrolled ? '#1e293b' : 'white' }}>
           {/* Note: In Vite, files in 'public' are accessed with just '/' */}
-          <img src="/Logo.jpeg" alt="ShubhUrja" style={{ height: '40px', marginRight: '10px', borderRadius: '50%' }} /> 
+          <img src="./Logo.jpeg" alt="ShubhUrja" style={{ height: '40px', marginRight: '10px', borderRadius: '50%' }} /> 
           ShubhUrja
         </div>
 
