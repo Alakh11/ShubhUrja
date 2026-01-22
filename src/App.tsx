@@ -87,19 +87,19 @@ function App() {
           <h2>Our <span className="highlight">Services</span></h2>
           <div className="grid grid-3" style={{ marginTop: '40px' }}>
             <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '12px', height: '300px' }}>
-              <img src="https://images.unsplash.com/photo-1611365892117-00ac5ef43c90?auto=format&fit=crop&w=800" alt="Residential" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src="https://images.unsplash.com/photo-1611365892117-00ac5ef43c90?auto=format&fit=crop&w=800" alt="10kW Residential Rooftop Solar Plant Installation" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               <div style={{ position: 'absolute', bottom: 0, background: 'rgba(0,0,0,0.7)', color: 'white', width: '100%', padding: '20px' }}>
                 <h3>Residential Rooftop</h3>
               </div>
             </div>
             <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '12px', height: '300px' }}>
-              <img src="https://images.unsplash.com/photo-1548337138-e87d889cc369?auto=format&fit=crop&w=800" alt="Commercial" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src="https://images.unsplash.com/photo-1548337138-e87d889cc369?auto=format&fit=crop&w=800" alt="Commercial Rooftop Solar Plant Installation" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               <div style={{ position: 'absolute', bottom: 0, background: 'rgba(0,0,0,0.7)', color: 'white', width: '100%', padding: '20px' }}>
                 <h3>Commercial Plants</h3>
               </div>
             </div>
             <div style={{ position: 'relative', overflow: 'hidden', borderRadius: '12px', height: '300px' }}>
-              <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=800" alt="Maintenance" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
+              <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=800" alt="Maintenance of Solar Plants" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               <div style={{ position: 'absolute', bottom: 0, background: 'rgba(0,0,0,0.7)', color: 'white', width: '100%', padding: '20px' }}>
                 <h3>Operations & Maintenance</h3>
               </div>
