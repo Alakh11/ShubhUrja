@@ -1,15 +1,20 @@
 // import React from 'react';
-import Navbar from './components/Navbar'; // The fixed Navbar
+import Navbar from './components/Navbar';
 import ContactForm from './components/ContactForm';
-import SavingsCalculator from './components/SavingsCalculator'; 
+import SavingsCalculator from './components/SavingsCalculator';
 import Faq from './components/Faq';
 import ProjectGallery from './components/ProjectGallery';
-import 'slick-carousel/slick/slick.css'; 
+import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import ComparisonTable from './components/ComparisonTable';
+// import PromoBar from './components/PromoBar';
+import EcoImpact from './components/EcoImpact';
 
 function App() {
   return (
     <div>
+      {/* <PromoBar /> */}
+
       {/* 1. Responsive Navbar */}
       <Navbar />
 
@@ -50,12 +55,15 @@ function App() {
           </div>
         </div>
       </section>
+      <EcoImpact />
+      {/* 4. Savings Calculator */}
+      <SavingsCalculator />
+      <ComparisonTable />
 
-      {/* 4. Project Gallery */}
+      {/* 5. Project Gallery */}
       <ProjectGallery />
 
-      {/* 5. Savings Calculator */}
-      <SavingsCalculator />
+      
 
       {/* 6. Process / How it Works Section */}
       <section id="process">
@@ -108,11 +116,12 @@ function App() {
         </div>
       </section>
 
-      {/* 8. FAQ Section */}
-      <Faq />
+      
 
       {/* 9. Contact Section */}
       <ContactForm />
+      {/* 8. FAQ Section */}
+      <Faq />
 
       {/* 10. Footer */}
       <footer style={{ background: '#0f172a', color: '#94a3b8', padding: '40px 20px', textAlign: 'center' }}>
@@ -124,7 +133,7 @@ function App() {
 
       {/* Floating WhatsApp Button */}
       <a href="https://wa.me/919580813770" target="_blank" rel="noreferrer" className="whatsapp-float">
-        <span className="material-symbols-outlined whatsapp-icon" style={{fontSize: '32px'}}>chat</span>
+        <span className="material-symbols-outlined whatsapp-icon" style={{ fontSize: '32px' }}>chat</span>
       </a>
 
     </div>
